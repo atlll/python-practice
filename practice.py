@@ -16,9 +16,9 @@ try:
     coo = pymysql.connect(
         host='127.0.0.1',
         port=3306,
-        user='****',
-        passwd='******',
-        db='****',
+        user='root',
+        passwd='19960327zt',
+        db = 'test2',
         charset='utf8'
         )
 except Exception as e:
@@ -140,7 +140,11 @@ else:
     #总开始
     def all_start():
         print str.center('欢迎进入猜大小游戏！',55,'-')
-        print 'PS: ╮(๑•́ ₃•̀๑)╭ 在进入游戏之前，你需要登录游戏','\n',' '*2,'*输入 0 注册游戏！','\n',' '*2,'*输入 1 登录游戏！','\n',' '*2,'*输入 2 退出游戏！','\n'*3
+        print 'PS: ╮(๑•́ ₃•̀๑)╭ 在进入游戏之前，你需要登录游戏','\n',' '*10,'*输入 0 注册游戏！','\n',' '*10,'*输入 1 登录游戏！','\n',' '*10,'*输入 2 退出游戏！','\n'
+        for i in xrange(4):
+            for j in xrange(11):
+                print '*','\t',
+            print '\n'
         starts = raw_input('请填入你的选择( ｡ớ ₃ờ):\n')
         startres = [0,1,2]
         if starts.isdigit():
