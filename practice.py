@@ -4,6 +4,7 @@
 import random
 import pymysql
 import re
+import time
 
 '''
 author：atlll
@@ -90,6 +91,7 @@ else:
             print e
         else:
             print '注册成功！','\n','-'*43
+            time.sleep(1)
         
 
     def login_usename():
@@ -117,6 +119,7 @@ else:
             if cursor.execute(sql_select_passwd,[login_passwd()]):
                 #判断用户密码是否在数据库中
                 coo.commit()
+                time.sleep(1)
                 print '登录成功!'  
                 start_game()
             else:
